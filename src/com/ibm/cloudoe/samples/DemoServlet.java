@@ -36,6 +36,8 @@ import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.client.fluent.Response;
 
+import com.ibm.cloudoe.utils.GetResponseData;
+
 
 
 @MultipartConfig
@@ -113,6 +115,10 @@ public class DemoServlet extends HttpServlet {
 		    }
 			
 			System.out.println("Nikesh_"+path+file_string);
+			
+			//String bstring = GetResponseData.parse(file_string);
+			
+			//System.out.println(bstring);
 			
 			servletOutputStream.flush();
 			servletOutputStream.close();
